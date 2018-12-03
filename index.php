@@ -6,6 +6,7 @@
 
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="google-signin-client_id" content="130326705414-kn31a741421077es8rhau50jdj2dar1h.apps.googleusercontent.com">
 
     <title>Budget Beheer</title>
 
@@ -14,7 +15,7 @@
         <?php include 'codes/php/bootstrap_include.php';?>
 
         <!-- Scripts -->
-
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
         <!-- Stylesheets -->
 
           <link rel="stylesheet" href="codes/css/index.css">
@@ -27,18 +28,9 @@
 
       <div class="container-fluid">
 
-          <form class="form-signin col-md-2" id="login">
-            <span id="reauth-email" class="reauth-email">
-            </span>
-              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                <div id="remember" class="checkbox">
-                  <label>
-                    <input type="checkbox" value="remember-me"> Remember me
-                  </label>
-                </div>
-                  <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
-          </form><!-- /form -->
+          <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+
 
         </div>
 
